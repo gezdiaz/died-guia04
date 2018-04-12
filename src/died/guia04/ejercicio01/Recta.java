@@ -35,9 +35,8 @@ public class Recta {
 		Recta aux;
 		if(otraRecta.getClass() == this.getClass()) {
 			if(this.pendiente() == ((Recta) otraRecta).pendiente()) {
-				if (this.A == ((Recta) otraRecta).getA()) {
-					aux = new Recta(this.A, ((Recta) otraRecta).getB());
-					return this.pendiente() == aux.pendiente();
+				if (this.A.equals(((Recta) otraRecta).getA()))  {
+					return true;
 				}else {
 					aux = new Recta(this.A, ((Recta) otraRecta).getA());
 					return this.pendiente() == aux.pendiente();
