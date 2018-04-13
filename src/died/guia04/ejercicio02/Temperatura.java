@@ -76,4 +76,14 @@ public class Temperatura {
 		}
 	}
 	
+	public Boolean esMayorQue(Temperatura otraTemperatura) {
+		switch(this.escala) {
+		case CELCIUS:
+			return this.grados > otraTemperatura.asCelcius();
+		case FAHRENHEIT:
+			return this.grados > otraTemperatura.asFahrenheit();
+		}
+		return false;
+	}
+	
 }
